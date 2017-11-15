@@ -62,7 +62,7 @@ class Scraper
 
     #binding.pry
     #
-    # profile_hash
+    profile_hash
 
   end
 
