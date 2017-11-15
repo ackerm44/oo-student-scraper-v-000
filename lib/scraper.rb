@@ -28,7 +28,7 @@ class Scraper
 
     profile_hash = {}
 
-    twitter = doc.css(".social-icon-container a")
+    twitter = doc.css(".social-icon-container a").attributes('href').value
 
     binding.pry
 
