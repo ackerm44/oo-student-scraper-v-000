@@ -33,6 +33,7 @@ class Scraper
     twitter = social.grep(/twitter/)
     linkedin = social.grep(/linkedin/)
     blog = social.grep(/blog/)
+    profile_quote = doc.css(".profile-quote").text
 
 
     binding.pry
