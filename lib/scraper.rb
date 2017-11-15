@@ -23,16 +23,15 @@ class Scraper
 
     students_hash = []
 
-    doc.css("div.roster-cards-container").each do |card|
-      card.css("div.student-card").each do |student|
+    #doc.css("div.roster-cards-container").each do |card|
+      doc.css("div.student-card").each do |student|
         students_hash << {
         :name => student.css("h4.student-name").text,
         :location => student.css("p.student-location").text,
         :profile_url => student.css("a").attribute("href").value
-        #:profile_url => "#{student.attr('href')}"
         }
       end
-    end
+    #end
 
     students_hash
 
