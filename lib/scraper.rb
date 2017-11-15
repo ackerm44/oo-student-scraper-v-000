@@ -42,7 +42,7 @@ class Scraper
    github_value = social.grep(/github/).join
    twitter_value = social.grep(/twitter/).join
    linkedin_value = social.grep(/linkedin/).join
-   blog_value = social.grep(/blog/).join
+   blog_value = social.last
    profile_quote_value = doc.css(".profile-quote").text
    bio_value = doc.css(".bio-content .description-holder p").text
 
