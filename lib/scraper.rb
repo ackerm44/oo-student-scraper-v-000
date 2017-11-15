@@ -42,7 +42,7 @@ class Scraper
    github_value = social.grep(/github/).join
    twitter_value = social.grep(/twitter/).join
    linkedin_value = social.grep(/linkedin/).join
-   if social.last != github_value && social.last != twitter_value && social.last != linkedinvalue
+   if social.last != github_value && social.last != twitter_value && social.last != linkedin_value
      blog_value = social.last
    end
    profile_quote_value = doc.css(".profile-quote").text
