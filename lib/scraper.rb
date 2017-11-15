@@ -23,7 +23,7 @@ class Scraper
   end
 
   def self.scrape_profile_page(profile_url)
-    profile_url = File.read('fixtures/student-site/students/jason-southwell.html')
+    profile_url = File.read(profile_url)
     doc = Nokogiri::HTML(profile_url)
 
     profile_hash = {}
@@ -45,7 +45,6 @@ class Scraper
    blog_value = social.grep(/blog/)
 
     profile_hash = {
-
       :twitter => twitter_value,
       :linkedin => linkedin_value,
       :github => github_value,
@@ -60,4 +59,4 @@ class Scraper
 
 end
 
-Scraper.scrape_profile_page('fixtures/student-site/students/jason-southwell.html')
+#Scraper.scrape_profile_page('fixtures/student-site/students/jason-southwell.html')
