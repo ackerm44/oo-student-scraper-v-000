@@ -16,9 +16,8 @@ class Scraper
       :location => student.css("p.student-location").text,
       :profile_url => "./fixtures/student-site/" + student.css("a").attribute("href").value
       }
-      puts students_hash
     end
-
+    puts students_hash
     students_hash
 
     # student = doc.css(".student-card")
