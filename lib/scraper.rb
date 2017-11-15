@@ -31,8 +31,6 @@ class Scraper
     twitter = doc.css(".social-icon-container a").attribute('href').value
 
     binding.pry
-    
-    end
 
   end
 
