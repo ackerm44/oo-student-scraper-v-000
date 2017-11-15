@@ -42,6 +42,7 @@ class Scraper
     github_value = social.grep(/github/)
     twitter_value = social.grep(/twitter/)
     linkedin_value = social.grep(/linkedin/)
+    blog_value = social.grep(/blog/)
 
     profile_hash = {
       :github => github_value,
