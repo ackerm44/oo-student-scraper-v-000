@@ -50,14 +50,14 @@ class Scraper
     #   end
     # end
 
-    # profile_hash = {
-    #    :github => github_value,
-    #   # :twitter => twitter_value,
-    #   # :linkedin => linkedin_value,
-    #   # :blog => blog_value,
-    #   :profile_quote => doc.css(".profile-quote").text,
-    #   :bio => doc.css(".bio-content .description-holder p").text
-    # }
+    profile_hash = {
+      :github => github_value,
+      # :twitter => twitter_value,
+      # :linkedin => linkedin_value,
+      # :blog => blog_value,
+      :profile_quote => doc.css(".profile-quote").text,
+      :bio => doc.css(".bio-content .description-holder p").text
+    }
 
     binding.pry
     #
