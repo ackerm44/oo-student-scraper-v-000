@@ -38,8 +38,8 @@ class Scraper
     #
     # binding.pry
     #
-    # social = doc.css(".social-icon-container a").collect {|link| link['href']},
-    # github_value = social.grep(/github/)
+     social = doc.css(".social-icon-container a").collect {|link| link['href']},
+     github_value = social.grep(/github/)
     # twitter_value = social.grep(/twitter/)
     # linkedin_value = social.grep(/linkedin/)
     # blog_value = social.grep(/blog/)
