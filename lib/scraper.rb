@@ -36,8 +36,8 @@ class Scraper
     profile_quote = doc.css(".profile-quote").text
     bio = doc.css(".bio-content .description-holder p").text
 
-    #binding.pry
-    # 
+    binding.pry
+    #
     # social = doc.css(".social-icon-container a").collect {|link| link['href']},
     # github_value = social.grep(/github/)
     # twitter_value = social.grep(/twitter/)
@@ -52,9 +52,9 @@ class Scraper
     #   :profile_quote => doc.css(".profile-quote").text,
     #   :bio => doc.css(".bio-content .description-holder p").text
     # }
-    # 
+    #
     # binding.pry
-    # 
+    #
     # profile_hash
 
   end
