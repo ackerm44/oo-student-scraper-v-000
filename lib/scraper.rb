@@ -48,7 +48,7 @@ class Scraper
    profile_quote_value = doc.css(".profile-quote").text
    bio_value = doc.css(".bio-content .description-holder p").text
 
-   binding.pry
+   #binding.pry
 
     profile_hash = {
       :twitter => twitter_value,
