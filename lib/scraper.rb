@@ -28,7 +28,7 @@ class Scraper
 
     profile_hash = {}
 
-    linkedin = doc.css(".social-icon-container").css("a").attribute("href = 'http://www.github.com'").value
+    social = doc.css(".social-icon-container a").collect {|link| link['href']}
 
     binding.pry
 
