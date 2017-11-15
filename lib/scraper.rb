@@ -35,7 +35,7 @@ class Scraper
     # blog = social.grep(/blog/)
     # profile_quote = doc.css(".profile-quote").text
     # bio = doc.css(".bio-content .description-holder p").text
-    # 
+    #
     # binding.pry
     #
     # social = doc.css(".social-icon-container a").collect {|link| link['href']},
@@ -45,14 +45,14 @@ class Scraper
     # blog_value = social.grep(/blog/)
 
     profile_hash = {
-      # :github => github_value,
+       :github => github_value,
       # :twitter => twitter_value,
       # :linkedin => linkedin_value,
       # :blog => blog_value,
       :profile_quote => doc.css(".profile-quote").text,
       :bio => doc.css(".bio-content .description-holder p").text
     }
-    
+
     binding.pry
     #
     # profile_hash
