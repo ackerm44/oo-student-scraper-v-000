@@ -22,7 +22,7 @@ class Scraper
     doc = Nokogiri::HTML(index_url)
 
     students_hash = []
-    
+
     doc.css("div.roster-cards-container").each do |card|
       card.css("div.student-card").each do |student|
         students_hash << {
