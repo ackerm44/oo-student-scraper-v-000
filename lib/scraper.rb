@@ -30,9 +30,9 @@ class Scraper
 
     social = doc.css(".social-icon-container a").collect {|link| link['href']}
 
-    github = social.scan(/github/)
-    twitter = social.scan(/twitter/)
-    linkedin = social.scan(/linkedin/)
+    github = social.grep(/github/)
+    twitter = social.grep(/twitter/)
+    linkedin = social.grep(/linkedin/)
 
     binding.pry
 
