@@ -29,9 +29,9 @@ class Scraper
     profile_hash = {}
 
     social = doc.css(".social-icon-container a").collect {|link| link['href']},
-    github => social.grep(/github/)
-    twitter => social.grep(/twitter/)
-    linkedin => social.grep(/linkedin/)
+    github = social.grep(/github/)
+    twitter = social.grep(/twitter/)
+    linkedin = social.grep(/linkedin/)
 
     profile_hash = {
       :github => github,
