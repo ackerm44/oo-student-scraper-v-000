@@ -30,7 +30,7 @@ class Scraper
 
     social = doc.css(".social-icon-container a").collect {|link| link['href']}
 
-    social.detect {|link| link = "http://www.github.com/*"}
+    github = social.detect {|link| link = "http://www.github.com/*"}
 
     binding.pry
 
