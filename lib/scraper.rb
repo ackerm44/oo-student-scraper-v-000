@@ -43,14 +43,16 @@ class Scraper
    twitter_value = social.grep(/twitter/).join
    linkedin_value = social.grep(/linkedin/).join
    blog_value = social.grep(/blog/).join
+   profile_quote_value = doc.css(".profile-quote").text
+   bio_value = doc.css(".bio-content .description-holder p").text
 
     profile_hash = {
       :twitter => twitter_value,
       :linkedin => linkedin_value,
       :github => github_value,
       :blog => blog_value,
-      :profile_quote => doc.css(".profile-quote").text,
-      :bio => doc.css(".bio-content .description-holder p").text
+      :profile_quote => profile_quote_value
+      :bio => bio_value
     }
 
     profile_hash
