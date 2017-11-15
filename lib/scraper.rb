@@ -59,7 +59,7 @@ class Scraper
       :bio => bio_value
     }
 
-    profile_hash.delete_if {|k, v| v == ""}
+    profile_hash.delete_if {|k, v| v == "" || v == nil}
     profile_hash
 
   end
