@@ -45,9 +45,10 @@ class Scraper
     # blog_value = social.grep(/blog/)
 
     social.each do |link|
-      if link.scan(/twitter/) 
+      if link.scan(/twitter/)
         twitter_value = link
       end
+    end
 
     profile_hash = {
        :github => github_value,
