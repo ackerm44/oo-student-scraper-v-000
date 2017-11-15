@@ -28,16 +28,6 @@ class Scraper
 
     profile_hash = {}
 
-    # social = doc.css(".social-icon-container a").collect {|link| link['href']}
-    # github = social.grep(/github/)
-    # twitter = social.grep(/twitter/)
-    # linkedin = social.grep(/linkedin/)
-    # blog = social.grep(/blog/)
-    # profile_quote = doc.css(".profile-quote").text
-    # bio = doc.css(".bio-content .description-holder p").text
-    #
-    # binding.pry
-    #
    social = doc.css(".social-icon-container a").collect {|link| link['href']}
    github_value = social.grep(/github/).join
    twitter_value = social.grep(/twitter/).join
