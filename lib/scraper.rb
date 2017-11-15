@@ -38,8 +38,9 @@ class Scraper
 
     #binding.pry
 
+    social = doc.css(".social-icon-container a").collect {|link| link['href']},
+
     profile_hash = {
-      :social = doc.css(".social-icon-container a").collect {|link| link['href']},
       :github => social.grep(/github/),
       :twitter => social.grep(/twitter/),
       :linkedin => social.grep(/linkedin/),
