@@ -64,4 +64,4 @@ class Scraper
 
 end
 
-#Scraper.scrape_profile_page('fixtures/student-site/students/jason-southwell.html')
+Scraper.scrape_profile_page('fixtures/student-site/students/morgan-vanyperen.html')
