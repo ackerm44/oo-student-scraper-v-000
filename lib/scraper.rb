@@ -44,9 +44,9 @@ class Scraper
     linkedin_value = social.grep(/linkedin/)
 
     profile_hash = {
-      :github => social.grep(/github/),
-      :twitter => social.grep(/twitter/),
-      :linkedin => social.grep(/linkedin/),
+      :github => github_value,
+      :twitter => twitter_value,
+      :linkedin => linkedin_value,
       :blog => social.grep(/blog/),
       :profile_quote => doc.css(".profile-quote").text,
       :bio => doc.css(".bio-content .description-holder p").text
