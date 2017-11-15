@@ -60,7 +60,7 @@ class Scraper
       :bio => doc.css(".bio-content .description-holder p").text
     }
 
-    binding.pry
+    #binding.pry
     #
     # profile_hash
 
