@@ -25,7 +25,9 @@ class Scraper
   def self.scrape_profile_page(profile_url)
     profile_url = File.read('fixtures/student-site/students/')
     doc = Nokogiri::HTML(profile_url)
-    
+
+    profile_hash = {}
+
   end
 
 end
