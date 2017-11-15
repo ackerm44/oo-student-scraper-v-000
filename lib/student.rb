@@ -5,22 +5,23 @@ class Student
   @@all = []
 
   def initialize(student_hash)
-    @name = name
-    @location = location
-    @twitter = twitter
-    @linkedin = linkedin
-    @github = github
-    @blog = blog
-    @profile_quote = profile_quote
-    @bio = bio
-    @profile_url = profile_url
+    # @name = name
+    # @location = location
+    # @twitter = twitter
+    # @linkedin = linkedin
+    # @github = github
+    # @blog = blog
+    # @profile_quote = profile_quote
+    # @bio = bio
+    # @profile_url = profile_url
+    student_hash.each {|key, value| self.send(("#{key}="), value)}
     @@all << student_hash
 
   end
 
   def self.create_from_collection(students_array)
     students_array.each do |student|
-      Student.new(student_hash)
+      Student.new(student)
     end
   end
 
