@@ -26,15 +26,16 @@ class Scraper
     profile_url = File.read('fixtures/student-site/students/')
     doc = Nokogiri::HTML(profile_url)
 
-    profile_hash = {} 
+    profile_hash = {}
 
     twitter = doc.css(".social-icon-container a").attribute('href').value
 
     binding.pry
+    
     end
 
   end
 
 end
 
-#Scraper.scrape_index_page('../fixtures/student-site/index.html')
+Scraper.scrape_profile_page('../fixtures/student-site/students/')
