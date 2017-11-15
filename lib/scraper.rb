@@ -34,7 +34,7 @@ class Scraper
     linkedin = social.grep(/linkedin/)
     blog = social.grep(/blog/)
     profile_quote = doc.css(".profile-quote").text
-
+    bio = doc.css(".bio-content .description-holder p").text
 
     binding.pry
 
