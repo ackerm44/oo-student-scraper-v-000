@@ -23,16 +23,17 @@ class Scraper
   end
 
   def self.scrape_profile_page(profile_url)
-    profile_url = File.read('fixtures/student-site/students/aaron-enser.html')
+    profile_url = File.read('fixtures/student-site/students/john-anthony.html')
     doc = Nokogiri::HTML(profile_url)
 
     profile_hash = {}
 
     social = doc.css(".social-icon-container a").collect {|link| link['href']}
-
     github = social.grep(/github/)
     twitter = social.grep(/twitter/)
     linkedin = social.grep(/linkedin/)
+
+    
 
     binding.pry
 
@@ -40,4 +41,4 @@ class Scraper
 
 end
 
-Scraper.scrape_profile_page('/fixtures/student-site/students/aaron-enser.html')
+Scraper.scrape_profile_page('/fixtures/student-site/students/john-anthony.html')
