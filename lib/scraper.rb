@@ -23,7 +23,7 @@ class Scraper
   end
 
   def self.scrape_profile_page(profile_url)
-    profile_url = File.read('fixtures/student-site/students/')
+    profile_url = File.read('fixtures/student-site/students/*')
     doc = Nokogiri::HTML(profile_url)
 
     profile_hash = {}
@@ -36,4 +36,4 @@ class Scraper
 
 end
 
-Scraper.scrape_profile_page('../fixtures/student-site/students/')
+Scraper.scrape_profile_page('../fixtures/student-site/students/*')
