@@ -40,9 +40,9 @@ class Scraper
     #
      social = doc.css(".social-icon-container a").collect {|link| link['href']}
      github_value = social.grep(/github/).join
-    # twitter_value = social.grep(/twitter/)
-    # linkedin_value = social.grep(/linkedin/)
-    # blog_value = social.grep(/blog/)
+    twitter_value = social.grep(/twitter/)
+    linkedin_value = social.grep(/linkedin/)
+    blog_value = social.grep(/blog/)
 
     # social.each do |link|
     #   if link.scan(/twitter/)
@@ -51,10 +51,11 @@ class Scraper
     # end
 
     profile_hash = {
+      
+      :twitter => twitter_value,
+      :linkedin => linkedin_value,
       :github => github_value,
-      # :twitter => twitter_value,
-      # :linkedin => linkedin_value,
-      # :blog => blog_value,
+      :blog => blog_value,
       :profile_quote => doc.css(".profile-quote").text,
       :bio => doc.css(".bio-content .description-holder p").text
     }
