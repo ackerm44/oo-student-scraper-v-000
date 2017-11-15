@@ -49,6 +49,8 @@ class Scraper
       :bio => doc.css(".bio-content .description-holder p").text
     }
 
+    profile_hash
+
   end
 
 end
