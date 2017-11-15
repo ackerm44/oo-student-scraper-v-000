@@ -32,8 +32,8 @@ class Scraper
     github = social.grep(/github/)
     twitter = social.grep(/twitter/)
     linkedin = social.grep(/linkedin/)
+    blog = social.grep(/blog/)
 
-    
 
     binding.pry
 
