@@ -51,7 +51,7 @@ class Scraper
       :linkedin => linkedin_value,
       :github => github_value,
       :blog => blog_value,
-      :profile_quote => profile_quote_value
+      :profile_quote => profile_quote_value,
       :bio => bio_value
     }
 
