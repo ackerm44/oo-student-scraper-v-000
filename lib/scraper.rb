@@ -10,11 +10,11 @@ class Scraper
 
     students_hash = {}
 
-    doc.css(".roster-cards-container").each do |student|
+    doc.css("div.student-card").each do |student|
       students_hash = {
-      :name => doc.css("div.student-card").first.css("h4.student-name").text,
-      :location => doc.css("div.student-card").first.css("p.student-location").text,
-      :profile_url => "./fixtures/student-site/" + doc.css("div.student-card a").attribute("href").value
+      :name => student.css("h4.student-name").text,
+      :location => student.css("p.student-location").text,
+      :profile_url => "./fixtures/student-site/" + student.css("a").attribute("href").value
       }
       puts students_hash
     end
